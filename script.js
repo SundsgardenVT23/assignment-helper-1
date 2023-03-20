@@ -12,6 +12,13 @@
 // getSummary: a function that should summarize your total balances. It should show your total
 // income, your total expenses and also calculate your current balances (income - expenses).
 
+const account = {
+  name: "Helena",
+  getName: function () {
+    alert(`Account name: ${this.name}`);
+  },
+};
+
 // create a function called menu()
 
 // the function menu() should only be responsible to show the different choices
@@ -21,6 +28,20 @@
 // depending on what the user selects from the menu you should call on the correct
 // method or poperty from the account object. You can use a switch or if/else statement for your
 // different menu choices. Please motivate you choice in a comment.
+
+function menu() {
+  const choice = parseFloat(
+    prompt("Please choose between 1) Display account name")
+  );
+
+  if (choice === 1) {
+    // do something
+    // display the account name
+    account.getName();
+  }
+}
+
+menu();
 
 // CODE TO HELP YOU GET STARTED
 
@@ -33,7 +54,7 @@
 // we need to wrap the propmt() in a function called parseFloat(). Why is that? You need to do some
 // googling anf the put your answer in a comment in your code.
 // the syntax you can use looks like this:
-const amount = parseFloat(prompt("How much was your expense?"));
+//const amount = parseFloat(prompt("How much was your expense?"));
 // the answer that the user will put in the input box will get stored in the variable amount.
 
 // HINT: you will need to use array methods in this assignment and there is one very basic one
@@ -44,15 +65,15 @@ const amount = parseFloat(prompt("How much was your expense?"));
 // array on separate lines you can add:
 ("\n");
 // for example:
-alert("This is a message " + "\n" + "with a new line");
+//alert("This is a message " + "\n" + "with a new line");
 // to your ouput. This will make the nes output on a new line.
 
 // to make the menu look nice we should not console.log any output. Instead we shoul use either alert()
 // or propmt()
 // we use alert() when we just want to display something to the user, for example a message:
-alert("This is a message in an alert box!");
+//alert("This is a message in an alert box!");
 // we use the prompt() when we want to ask the user to do something cause the prompt()
 // will display any message that we want and also display an input field where the user
 // can type an input. Like this:
-const age = parseFloat(propmpt("How old are you?"));
+//const age = parseFloat(propmpt("How old are you?"));
 // whatever the user types in the input field will be stored in the variable age.
